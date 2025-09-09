@@ -106,7 +106,7 @@
   </header>
 
   <div class="mapa-container">
-    <img src="mapa-expo.jpeg" alt="Mapa do Evento" style="max-width: 100%; height: auto;">
+    <img src="Planta-ExpoFashion.jpeg" alt="Mapa do Evento" style="max-width: 100%; height: auto;">
   </div>
   <p class="orientacoes">CLIQUE NOS ESTANDES ABAIXO PARA PRÉ-RESERVA. É POSSÍVEL SLECIONAR MAIS DE UM ESTANDE.</p>
   <p class="orientacoes">APÓS SELECIONAR OS ESTANDES, PREENCHA O FORMULÁRIO E CLIQUE EM ENVIAR PARA CONCLUIR.</p>
@@ -134,12 +134,12 @@
   <script>
     // 🔹 CONFIGURAÇÃO DO FIREBASE (substituir pelos seus dados)
     const firebaseConfig = {
-      apiKey: "AIzaSyAjae83IWYk8OWkgdId6Y5oNS6FbJ9-aFE",
-      authDomain: "reservaexpoco-goiania.firebaseapp.com",
-      projectId: "reservaexpoco-goiania",
-      storageBucket: "reservaexpoco-goiania.firebasestorage.app",
-      messagingSenderId: "540494014283",
-      appId: "1:540494014283:web:f253fcefe25c0bfc796ace"
+      apiKey: "AIzaSyDLAXR84dGJYKAYLvWEpQLh3hxfv95dzRo",
+      authDomain: "reservaexpofashion-brasilia.firebaseapp.com",
+      projectId: "reservaexpofashion-brasilia",
+      storageBucket: "reservaexpofashion-brasilia.firebasestorage.app",
+      messagingSenderId: "832813353769",
+      appId: "1:832813353769:web:c81c6ea9fa2661eb980538"
     };
 
     firebase.initializeApp(firebaseConfig);
@@ -149,14 +149,29 @@
     let estandesSelecionados = [];
 
     const estandes = [];
-    for (let i = 1; i <= 30; i++) estandes.push({ id: `A${i}`, cor: '#f4e542' });
-    for (let i = 31; i <= 42; i++) estandes.push({ id: `B${i}`, cor: '#ffb347' });
-    for (let i = 43; i <= 78; i++) estandes.push({ id: `C${i}`, cor: '#b0e0e6' });
-    for (let i = 79; i <= 87; i++) estandes.push({ id: `D${i}`, cor: '#98fb98' });
-    for (let i = 88; i <= 114; i++) estandes.push({ id: `E${i}`, cor: '#dda0dd' });
-    for (let i = 115; i <= 139; i++) estandes.push({ id: `F${i}`, cor: '#f08080' });
-    for (let i = 140; i <= 164; i++) estandes.push({ id: `G${i}`, cor: '#87ceeb' });
-    for (let i = 165; i <= 191; i++) estandes.push({ id: `H${i}`, cor: '#9FC416' });
+    for (let i = 1; i <= 20; i++) estandes.push({ id: `A${i}`, cor: #f4e542 });
+    for (let i = 21; i <= 59; i++) estandes.push({ id: `B${i}`, cor: #ffb347 });
+    for (let i = 60; i <= 79; i++) estandes.push({ id: `C${i}`, cor: #b0e0e6 });
+    for (let i = 80; i <= 118; i++) estandes.push({ id: `D${i}`, cor: #98fb98 });
+    for (let i = 119; i <= 155; i++) estandes.push({ id: `E${i}`, cor: #dda0dd });
+    for (let i = 156; i <= 192; i++) estandes.push({ id: `F${i}`, cor: #f08080 });
+    for (let i = 193; i <= 234; i++) estandes.push({ id: `G${i}`, cor: #87ceeb });
+    for (let i = 235; i <= 276; i++) estandes.push({ id: `H${i}`, cor: #9FC416 });
+    for (let i = 277; i <= 348; i++) estandes.push({ id: `i${i}`, cor: #FFE699 });
+    for (let i = 349; i <= 366; i++) estandes.push({ id: `J${i}`, cor: #F8CBAD });
+    for (let i = 367; i <= 378; i++) estandes.push({ id: `K${i}`, cor: #FECAFD });
+    for (let i = 379; i <= 396; i++) estandes.push({ id: `L${i}`, cor: #C5E0B4 });
+    for (let i = 397; i <= 414; i++) estandes.push({ id: `M${i}`, cor: #FFFF3B });
+    for (let i = 415; i <= 432; i++) estandes.push({ id: `N${i}`, cor: #9A57CD });
+    for (let i = 433; i <= 450; i++) estandes.push({ id: `O${i}`, cor: #00FFCC });
+    for (let i = 451; i <= 462; i++) estandes.push({ id: `P${i}`, cor: #9999FF });
+    for (let i = 463; i <= 474; i++) estandes.push({ id: `Q${i}`, cor: #FF481D });
+    for (let i = 475; i <= 492; i++) estandes.push({ id: `R${i}`, cor: #009900 });
+    for (let i = 493; i <= 510; i++) estandes.push({ id: `S${i}`, cor: #FF66FF });
+    for (let i = 511; i <= 528; i++) estandes.push({ id: `T${i}`, cor: #CC6600 });
+    for (let i = 529; i <= 546; i++) estandes.push({ id: `U${i}`, cor: #00FF99 });
+    for (let i = 547; i <= 558; i++) estandes.push({ id: `V${i}`, cor: #FF6600 });
+    for (let i = 559; i <= 576; i++) estandes.push({ id: `X${i}`, cor: #CCCC00 });
 
     async function carregarReservas() {
       const snapshot = await db.collection("reservas").get();
